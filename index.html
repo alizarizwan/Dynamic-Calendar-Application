@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar Booking Application - Web Programming Assignment</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <header class="header">
+    <h1>Calendar Booking Application</h1>
+  </header>
+  <div id="calendar-container">
+    <div id="month-year-display">
+      <span id="month-year"></span>
+    </div>
+    <div id="navigation">
+      <button class="nav-button" id="prev-button" onclick="prevMonth()">&#9664; Previous</button>
+      <button class="nav-button" id="next-button" onclick="nextMonth()">Next &#9654;</button>
+    </div>
+    <table id="calendar">
+      <thead>
+        <tr>
+          <th>Sunday</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+          <th>Saturday</th>
+        </tr>
+      </thead>
+      <tbody id="calendar-body">
+        <!-- Dates will be dynamically populated here -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Booking form (hidden by default) -->
+  <div id="booking-form" style="display: none;">
+    <p id="selected-date"></p>
+
+    <div id="form-group">
+      <label for="time-slot">Select Booking Time:</label>
+      <select id="time-slot" name="time-slot" required>
+        <!-- Time slots will be dynamically added here -->
+      </select>
+    </div>
+
+    <div id="form-group">
+      <label for="reason">Reason for booking:</label>
+      <input type="text" id="reason" name="reason" required placeholder="e.g., Meeting">
+    </div>
+
+    <button class="confirm-button" onclick="confirmBooking()">Confirm Booking</button>
+    <button class="remove-button" onclick="removeBooking()">Remove Booking</button>
+    <button class="cancel-button" onclick="closeForm()">Cancel</button>
+  </div>
+  
+  <script src="script.js"></script>
+
+  <footer>
+    <p>Calendar Booking Application - Web Programming Assignment<br>
+    <a href="mailto:aliza.rizwan@ontariotechu.net">aliza.rizwan@ontariotechu.net</a></p>
+  </footer>
+</body>
+</html>
